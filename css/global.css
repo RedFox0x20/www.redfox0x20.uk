@@ -1,0 +1,158 @@
+/*
+ * Global CSS Configuration
+ * Provides a set of default rules and standard classes
+ */
+
+/*** DATA ***/
+:root {
+    font-family: monospace;
+    font-size: 12pt;
+}
+
+
+
+/*** RESET ***/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body[data-theme="dark"] {
+    --var-background: rgb(0, 0, 0);
+    --var-text-color: rgb(255, 255, 255);
+}
+
+body[data-theme="light"] {
+    --var-background: rgb(255, 255, 255);
+    --var-text-color: rgb(0, 0, 0);
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+
+    overflow: hidden;
+
+    background: var(--var-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+hr {
+    margin-top: 5px;
+}
+
+/*** FLEX ***/
+
+.flex,
+.flex-center {
+    display: flex;
+    flex-grow: 1;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/** MARGIN **/
+.margin-auto {
+    margin: auto;
+}
+
+/*** SIZE ***/
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+/*** CONTAINERS ***/
+.padded {
+    padding: 10px;
+}
+
+.glow-wrapper {
+    position: relative;
+}
+
+.glow-border {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(to bottom right, rgb(64, 92, 187), rgba(132, 0, 255, 0.781));
+
+    filter: blur(10px);
+    z-index: -1;
+
+    border-radius: 10px;
+}
+
+.glow-content {
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(to bottom right, rgb(64, 92, 187), rgba(132, 0, 255, 0.781));
+}
+
+.text-center {
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    flex-grow: 1;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(112, 103, 103, 0.486);
+    box-shadow: 0 0 10px 5px;
+}
+
+.card>a {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+}
+
+.card * {
+    margin: 5px;
+}
+
+.button {
+    margin: 10px;
+    border: solid white 2px;
+    border-radius: 10px;
+}
+
+.button>.button-text {
+    margin: 10px;
+}
+
+.section-header {
+    margin-left: 1.5rem;
+}
+
+.max-width-1400 {
+    max-width: 1400px;
+}
