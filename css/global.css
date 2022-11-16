@@ -156,3 +156,7 @@ hr {
 .max-width-1400 {
     max-width: 1400px;
 }
+
+.max-width-25pct {
+    max-width: 25%;
+}
